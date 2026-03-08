@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumine Setiana - Toko Hijab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+    /* Reset dan Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff; /* Krem */
+}
+
+/* Header */
+header {
+    background-color: #d8c84d; /* Ungu */
+    font-size: 18px;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 40px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    object-fit: cover;
+    border-radius: 210px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    height: 475px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem 2rem;
+    background-color: #ffffff;
+    margin-top: 80px; /* Offset untuk header fixed */
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    background-color: #ffffff; 
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #238904;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #238904;
+}
+
+.hero-image {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+/* Products */
+.products {
+    padding: 2rem 2rem;
+    background-color: white;
+    text-align: center;
+}
+
+.products h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 380px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    height: 310px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 1rem 0;
+    color: #000000;
+}
+/* About */
+.about {
+    padding: 2rem 2rem;
+    font-size: 20px;
+    background-color: #d8c84d; /* Ungu */
+    color: white;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact */
+.contact {
+    padding: 4rem 2rem;
+    background-color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    .product-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+</style>
+<header>
+        <nav>
+            <div class="LOGO">Lumine Setiana By Ines Setiana</div>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Lumine Setiana </h1>
+            <h2>Your Daily Essential Hijab</h2>
+            <p>Lumine Setiana adalah produk Brand Hijab yang menghadirkan koleksi elegan, nyaman dan berkualitas premium.
+                Setiap produk kami dirancang dengan warna-warna cantik, bahan pilihan dan detail yang rapi untuk mendukung penampilan perempuan agar tetap anggun dan percaya diri dalam setiap aktivitas.</p>
+            <a href="#products" class="btn">Lihat Produk</a>
+        </div>
+
+        <img src="LOGO LS.jpg" alt="Hijab Banner" class="logo">
+    </section>
+
+    <section id="products" class="products">
+        <h2>Koleksi Produk</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Paris.jpg" alt="Paris">
+                <h3>Hijab Paris Premium</h3>
+                <p>Rp 40.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Motif.jpg" alt="Motif">
+                <h3>Hijab Motif Premium</h3>
+                <p>Rp 50.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Syar'i.jpg" alt="Syar'i">
+                <h3>Pashmina Rayon Premium</h3>
+                <p>Rp 45.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="viscose.jpg" alt="Viscose">
+                <h3>Pashmina Viscose Premium</h3>
+                <p>Rp 55.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="shimmer.jpg" alt= "shimmer">
+                <h3>Pashmina Silk Premium</h3>
+                <p>Rp 53.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="turkey.jpg" alt="Turkey">
+                <h3>Pashmina Turkey Premium</h3>
+                <p>Rp 60.000</p>
+                <button class="btn">Beli Sekarang</button>             
+            </div>
+            <div class="product-card">
+                <img src="Ceruty.jpg" alt="Ceruty">
+                <h3>Pashmina Ceruty Premium </h3>
+                <p>Rp 45.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="kaos.jpg" alt="Kaos">
+                <h3>Pashmina Kaos Premium</h3>
+                <p>Rp 45.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Khimar.jpg" alt="Khimar">
+                <h3>Khimar</h3>
+                <p>Rp 35.000</p>
+                <button class="btn">Beli Sekarang</button>              
+            </div>
+            <div class="product-card">
+                <img src="bergo.jpg" alt="Bergo">
+                <h3>Bergo</h3>
+                <p>Rp 30.000</p>
+                <button class="btn">Beli Sekarang</button>
+             </div>
+             <div class="product-card">
+                <img src="ciput.jpg" alt="Ciput">
+                <h3>Ciput</h3>
+                <p>Rp 20.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="magnet.jpg" alt="Magnet">
+                <h3>Magnet</h3>
+                <p>Rp 12.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="mukena.jpg" alt="Mukena">
+                <h3>LS Mukena </h3>
+                <p>Rp 350.000</p>
+                <button class="btn">Beli Sekarang</button>
+             </div>
+             <div class="product-card">
+                <img src="mukena2.jpg" alt="Mukena 2">
+                <h3>LS Mukena</h3>
+                <p>Rp 320.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="sajadah2.jpg" alt="Sajadah 2">
+                <h3>LS Sajadah</h3>
+                <p>Rp 100.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>  
+             <div class="product-card">
+                <img src="sajadah.jpg" alt="Sajadah">
+                <h3>LS Sajadah</h3>
+                <p>Rp 110.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+             <div class="product-card">
+                <img src="quran.jpg" alt="quran">
+                <h3>LS Qur'an</h3>
+                <p>Rp 185.000</p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+             <div class="product-card">
+                <img src="quran2.jpg" alt="quran2">
+                <h3>LS Qur'an</h3>
+                <p>Rp 190.000</p>
+                <button class="btn">Beli Sekarang</button>
+             </div>   
+    </section>
+
+    <section id="about" class="about">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah toko online yang menyediakan produk pilihan dengan kualitas 
+        terjaga dan desain yang modern. Setiap produk dipilih dengan teliti untuk memastikan kenyamanan dan kepuasan pelanggan.</p>
+        <p>Kami berkomitmen memberikan pelayanan yang ramah proses pemesanan yang mudah, serta pengiriman yang aman dan tepat waktu.
+        Kepuasan pelanggan adalah prioritas bagi kami.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Kontak Kami</h2>
+        <p>Email: info@luminehijab.com | Telepon: +62 812-3456-7890</p>
+        <form>
+            <input type="text" placeholder="Nama Anda" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan"></textarea>
+            <button type="submit" class="btn">Kirim</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Lumine Setiana. Semua hak dilindungi.</p>
+    </footer>
+    <script>
+        // Tambahkan JavaScript sederhana untuk interaktivitas, misalnya smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
